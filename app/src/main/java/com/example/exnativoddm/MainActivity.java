@@ -2,18 +2,25 @@ package com.example.exnativoddm;
 
 import android.app.Activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends Activity {
 
     private final String TAG ="ifo";
 
     public void MainActivity(){
+
 
     }
 
@@ -28,11 +35,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle estado) {
         super.onCreate(estado);
 
-        Tela t = new Tela(this);
-        new Thread(t).start();
-        setContentView(t);
-
-/*        setContentView(R.layout.activity_main);
+        //exemplo GUI xml
+        setContentView(R.layout.activity_main);
 
         EditText campoNome = findViewById(R.id.campoNome);
         EditText campoSenha = findViewById(R.id.campoSenha);
@@ -47,7 +51,6 @@ public class MainActivity extends Activity {
         });
 
         Log.i(TAG, "No construtor...");
-*/
 
         //Log.i(TAG, "No onCreate()...");
     }
@@ -56,6 +59,7 @@ public class MainActivity extends Activity {
         super.onStart();
         Log.i(TAG, "No onStart()...");
     }
+
 
     protected void onResume(){
         super.onResume();

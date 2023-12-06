@@ -34,7 +34,7 @@
             android:layout_height="30dp"
             android:textSize="20dp"
             />
-        <com.example.exnativoddm.MeuEditText
+        <com.example.exnativoddm.componente_customizado.MeuEditText
             android:id="@+id/campoSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

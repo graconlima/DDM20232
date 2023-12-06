@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.exnativoddm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -10,14 +14,44 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExNativoDDM">
         <activity
-            android:name=".MainActivity"
+            android:name=".banco_dados.ExBD"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".comunicacao.ExREST"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".comunicacao.ClienteTCP"
+            android:exported="false" />
+        <activity
+            android:name=".comunicacao.ServidorTCP"
+            android:exported="false" />
+        <activity
+            android:name=".intencoes.TelaIntentChamada"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ABRIR_TELA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".componente_customizado.ExComponenteCustomizado"
+            android:exported="false" />
+        <activity
+            android:name=".intencoes.ExIntent"
+            android:exported="true"></activity>
+        <activity
+            android:name=".thread_handler.ExThreadHandler"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

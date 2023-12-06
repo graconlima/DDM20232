@@ -1,8 +1,9 @@
-package com.example.exnativoddm;
+package com.example.exnativoddm.componente_customizado;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.graphics.Paint;
@@ -31,6 +32,11 @@ public class Tela extends View implements Runnable {
         y = e.getY();
         invalidate();
         return true;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return super.onKeyDown(keyCode, event);
     }
 
     public void run() {
