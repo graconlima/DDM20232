@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
         Log.i(TAG, "No construtor...");
 */
 
-        Log.i(TAG, "No onCreate()...");
+        //Log.i(TAG, "No onCreate()...");
     }
 
     protected void onStart(){
